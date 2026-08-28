@@ -23,6 +23,7 @@ import { Route as PoetryRouteImport } from './routes/poetry'
 import { Route as TheoryRouteImport } from './routes/theory'
 import { Route as UnseenRouteImport } from './routes/unseen'
 import { Route as VariablesRouteImport } from './routes/variables'
+import { Route as LetterSlugRouteImport } from './routes/letter.$slug'
 import { Route as PoemSlugRouteImport } from './routes/poem.$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -95,6 +96,11 @@ const VariablesRoute = VariablesRouteImport.update({
   path: '/variables',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LetterSlugRoute = LetterSlugRouteImport.update({
+  id: '/letter/$slug',
+  path: '/letter/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoemSlugRoute = PoemSlugRouteImport.update({
   id: '/poem/$slug',
   path: '/poem/$slug',
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/theory': typeof TheoryRoute
   '/unseen': typeof UnseenRoute
   '/variables': typeof VariablesRoute
+  '/letter/$slug': typeof LetterSlugRoute
   '/poem/$slug': typeof PoemSlugRoute
 }
 export interface FileRoutesByTo {
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/theory': typeof TheoryRoute
   '/unseen': typeof UnseenRoute
   '/variables': typeof VariablesRoute
+  '/letter/$slug': typeof LetterSlugRoute
   '/poem/$slug': typeof PoemSlugRoute
 }
 export interface FileRoutesById {
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/theory': typeof TheoryRoute
   '/unseen': typeof UnseenRoute
   '/variables': typeof VariablesRoute
+  '/letter/$slug': typeof LetterSlugRoute
   '/poem/$slug': typeof PoemSlugRoute
 }
 export interface FileRouteTypes {
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/theory'
     | '/unseen'
     | '/variables'
+    | '/letter/$slug'
     | '/poem/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/theory'
     | '/unseen'
     | '/variables'
+    | '/letter/$slug'
     | '/poem/$slug'
   id:
     | '__root__'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/theory'
     | '/unseen'
     | '/variables'
+    | '/letter/$slug'
     | '/poem/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -222,6 +234,7 @@ export interface RootRouteChildren {
   TheoryRoute: typeof TheoryRoute
   UnseenRoute: typeof UnseenRoute
   VariablesRoute: typeof VariablesRoute
+  LetterSlugRoute: typeof LetterSlugRoute
   PoemSlugRoute: typeof PoemSlugRoute
 }
 
@@ -325,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VariablesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/letter/$slug': {
+      id: '/letter/$slug'
+      path: '/letter/$slug'
+      fullPath: '/letter/$slug'
+      preLoaderRoute: typeof LetterSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/poem/$slug': {
       id: '/poem/$slug'
       path: '/poem/$slug'
@@ -350,6 +370,7 @@ const rootRouteChildren: RootRouteChildren = {
   TheoryRoute: TheoryRoute,
   UnseenRoute: UnseenRoute,
   VariablesRoute: VariablesRoute,
+  LetterSlugRoute: LetterSlugRoute,
   PoemSlugRoute: PoemSlugRoute,
 }
 export const routeTree = rootRouteImport
