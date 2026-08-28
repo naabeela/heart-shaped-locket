@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ArchiveRouteImport } from './routes/archive'
 import { Route as BecomingRouteImport } from './routes/becoming'
+import { Route as ConclusionRouteImport } from './routes/conclusion'
 import { Route as ContradictionsRouteImport } from './routes/contradictions'
 import { Route as ExperimentRouteImport } from './routes/experiment'
 import { Route as IndexOfObservationsRouteImport } from './routes/index-of-observations'
@@ -40,6 +41,11 @@ const ArchiveRoute = ArchiveRouteImport.update({
 const BecomingRoute = BecomingRouteImport.update({
   id: '/becoming',
   path: '/becoming',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConclusionRoute = ConclusionRouteImport.update({
+  id: '/conclusion',
+  path: '/conclusion',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContradictionsRoute = ContradictionsRouteImport.update({
@@ -117,6 +123,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/archive': typeof ArchiveRoute
   '/becoming': typeof BecomingRoute
+  '/conclusion': typeof ConclusionRoute
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/archive': typeof ArchiveRoute
   '/becoming': typeof BecomingRoute
+  '/conclusion': typeof ConclusionRoute
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/archive': typeof ArchiveRoute
   '/becoming': typeof BecomingRoute
+  '/conclusion': typeof ConclusionRoute
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
@@ -177,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/archive'
     | '/becoming'
+    | '/conclusion'
     | '/contradictions'
     | '/experiment'
     | '/index-of-observations'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/'
     | '/archive'
     | '/becoming'
+    | '/conclusion'
     | '/contradictions'
     | '/experiment'
     | '/index-of-observations'
@@ -215,6 +226,7 @@ export interface FileRouteTypes {
     | '/'
     | '/archive'
     | '/becoming'
+    | '/conclusion'
     | '/contradictions'
     | '/experiment'
     | '/index-of-observations'
@@ -235,6 +247,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArchiveRoute: typeof ArchiveRoute
   BecomingRoute: typeof BecomingRoute
+  ConclusionRoute: typeof ConclusionRoute
   ContradictionsRoute: typeof ContradictionsRoute
   ExperimentRoute: typeof ExperimentRoute
   IndexOfObservationsRoute: typeof IndexOfObservationsRoute
@@ -272,6 +285,13 @@ declare module '@tanstack/react-router' {
       path: '/becoming'
       fullPath: '/becoming'
       preLoaderRoute: typeof BecomingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conclusion': {
+      id: '/conclusion'
+      path: '/conclusion'
+      fullPath: '/conclusion'
+      preLoaderRoute: typeof ConclusionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contradictions': {
@@ -379,6 +399,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArchiveRoute: ArchiveRoute,
   BecomingRoute: BecomingRoute,
+  ConclusionRoute: ConclusionRoute,
   ContradictionsRoute: ContradictionsRoute,
   ExperimentRoute: ExperimentRoute,
   IndexOfObservationsRoute: IndexOfObservationsRoute,
