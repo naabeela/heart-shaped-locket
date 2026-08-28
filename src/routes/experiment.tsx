@@ -193,7 +193,7 @@ function Experiment() {
     if (picked !== null) return;
     setPicked(idx);
     setUnlocked((u) => (u.includes(s.id) ? u : [...u, s.id]));
-    if (s.choices[idx].verdict !== "observed") setCorrected((c) => c + 1);
+    if (s.choices[idx]?.verdict !== "observed") setCorrected((c) => c + 1);
   };
 
   const next = () => {
