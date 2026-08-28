@@ -10,33 +10,206 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ArchiveRouteImport } from './routes/archive'
+import { Route as BecomingRouteImport } from './routes/becoming'
+import { Route as ContradictionsRouteImport } from './routes/contradictions'
+import { Route as ExperimentRouteImport } from './routes/experiment'
+import { Route as IndexOfObservationsRouteImport } from './routes/index-of-observations'
+import { Route as ObservationRouteImport } from './routes/observation'
+import { Route as OrientationRouteImport } from './routes/orientation'
+import { Route as PatternsRouteImport } from './routes/patterns'
+import { Route as PoetryRouteImport } from './routes/poetry'
+import { Route as TheoryRouteImport } from './routes/theory'
+import { Route as UnseenRouteImport } from './routes/unseen'
+import { Route as VariablesRouteImport } from './routes/variables'
+import { Route as PoemSlugRouteImport } from './routes/poem.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArchiveRoute = ArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BecomingRoute = BecomingRouteImport.update({
+  id: '/becoming',
+  path: '/becoming',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContradictionsRoute = ContradictionsRouteImport.update({
+  id: '/contradictions',
+  path: '/contradictions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperimentRoute = ExperimentRouteImport.update({
+  id: '/experiment',
+  path: '/experiment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexOfObservationsRoute = IndexOfObservationsRouteImport.update({
+  id: '/index-of-observations',
+  path: '/index-of-observations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObservationRoute = ObservationRouteImport.update({
+  id: '/observation',
+  path: '/observation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrientationRoute = OrientationRouteImport.update({
+  id: '/orientation',
+  path: '/orientation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PatternsRoute = PatternsRouteImport.update({
+  id: '/patterns',
+  path: '/patterns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoetryRoute = PoetryRouteImport.update({
+  id: '/poetry',
+  path: '/poetry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheoryRoute = TheoryRouteImport.update({
+  id: '/theory',
+  path: '/theory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UnseenRoute = UnseenRouteImport.update({
+  id: '/unseen',
+  path: '/unseen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VariablesRoute = VariablesRouteImport.update({
+  id: '/variables',
+  path: '/variables',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoemSlugRoute = PoemSlugRouteImport.update({
+  id: '/poem/$slug',
+  path: '/poem/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
+  '/becoming': typeof BecomingRoute
+  '/contradictions': typeof ContradictionsRoute
+  '/experiment': typeof ExperimentRoute
+  '/index-of-observations': typeof IndexOfObservationsRoute
+  '/observation': typeof ObservationRoute
+  '/orientation': typeof OrientationRoute
+  '/patterns': typeof PatternsRoute
+  '/poetry': typeof PoetryRoute
+  '/theory': typeof TheoryRoute
+  '/unseen': typeof UnseenRoute
+  '/variables': typeof VariablesRoute
+  '/poem/$slug': typeof PoemSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
+  '/becoming': typeof BecomingRoute
+  '/contradictions': typeof ContradictionsRoute
+  '/experiment': typeof ExperimentRoute
+  '/index-of-observations': typeof IndexOfObservationsRoute
+  '/observation': typeof ObservationRoute
+  '/orientation': typeof OrientationRoute
+  '/patterns': typeof PatternsRoute
+  '/poetry': typeof PoetryRoute
+  '/theory': typeof TheoryRoute
+  '/unseen': typeof UnseenRoute
+  '/variables': typeof VariablesRoute
+  '/poem/$slug': typeof PoemSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/archive': typeof ArchiveRoute
+  '/becoming': typeof BecomingRoute
+  '/contradictions': typeof ContradictionsRoute
+  '/experiment': typeof ExperimentRoute
+  '/index-of-observations': typeof IndexOfObservationsRoute
+  '/observation': typeof ObservationRoute
+  '/orientation': typeof OrientationRoute
+  '/patterns': typeof PatternsRoute
+  '/poetry': typeof PoetryRoute
+  '/theory': typeof TheoryRoute
+  '/unseen': typeof UnseenRoute
+  '/variables': typeof VariablesRoute
+  '/poem/$slug': typeof PoemSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/archive'
+    | '/becoming'
+    | '/contradictions'
+    | '/experiment'
+    | '/index-of-observations'
+    | '/observation'
+    | '/orientation'
+    | '/patterns'
+    | '/poetry'
+    | '/theory'
+    | '/unseen'
+    | '/variables'
+    | '/poem/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/archive'
+    | '/becoming'
+    | '/contradictions'
+    | '/experiment'
+    | '/index-of-observations'
+    | '/observation'
+    | '/orientation'
+    | '/patterns'
+    | '/poetry'
+    | '/theory'
+    | '/unseen'
+    | '/variables'
+    | '/poem/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/archive'
+    | '/becoming'
+    | '/contradictions'
+    | '/experiment'
+    | '/index-of-observations'
+    | '/observation'
+    | '/orientation'
+    | '/patterns'
+    | '/poetry'
+    | '/theory'
+    | '/unseen'
+    | '/variables'
+    | '/poem/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchiveRoute: typeof ArchiveRoute
+  BecomingRoute: typeof BecomingRoute
+  ContradictionsRoute: typeof ContradictionsRoute
+  ExperimentRoute: typeof ExperimentRoute
+  IndexOfObservationsRoute: typeof IndexOfObservationsRoute
+  ObservationRoute: typeof ObservationRoute
+  OrientationRoute: typeof OrientationRoute
+  PatternsRoute: typeof PatternsRoute
+  PoetryRoute: typeof PoetryRoute
+  TheoryRoute: typeof TheoryRoute
+  UnseenRoute: typeof UnseenRoute
+  VariablesRoute: typeof VariablesRoute
+  PoemSlugRoute: typeof PoemSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +221,115 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/archive': {
+      id: '/archive'
+      path: '/archive'
+      fullPath: '/archive'
+      preLoaderRoute: typeof ArchiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/becoming': {
+      id: '/becoming'
+      path: '/becoming'
+      fullPath: '/becoming'
+      preLoaderRoute: typeof BecomingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contradictions': {
+      id: '/contradictions'
+      path: '/contradictions'
+      fullPath: '/contradictions'
+      preLoaderRoute: typeof ContradictionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiment': {
+      id: '/experiment'
+      path: '/experiment'
+      fullPath: '/experiment'
+      preLoaderRoute: typeof ExperimentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/index-of-observations': {
+      id: '/index-of-observations'
+      path: '/index-of-observations'
+      fullPath: '/index-of-observations'
+      preLoaderRoute: typeof IndexOfObservationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/observation': {
+      id: '/observation'
+      path: '/observation'
+      fullPath: '/observation'
+      preLoaderRoute: typeof ObservationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/orientation': {
+      id: '/orientation'
+      path: '/orientation'
+      fullPath: '/orientation'
+      preLoaderRoute: typeof OrientationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/patterns': {
+      id: '/patterns'
+      path: '/patterns'
+      fullPath: '/patterns'
+      preLoaderRoute: typeof PatternsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/poetry': {
+      id: '/poetry'
+      path: '/poetry'
+      fullPath: '/poetry'
+      preLoaderRoute: typeof PoetryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/theory': {
+      id: '/theory'
+      path: '/theory'
+      fullPath: '/theory'
+      preLoaderRoute: typeof TheoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/unseen': {
+      id: '/unseen'
+      path: '/unseen'
+      fullPath: '/unseen'
+      preLoaderRoute: typeof UnseenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/variables': {
+      id: '/variables'
+      path: '/variables'
+      fullPath: '/variables'
+      preLoaderRoute: typeof VariablesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/poem/$slug': {
+      id: '/poem/$slug'
+      path: '/poem/$slug'
+      fullPath: '/poem/$slug'
+      preLoaderRoute: typeof PoemSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchiveRoute: ArchiveRoute,
+  BecomingRoute: BecomingRoute,
+  ContradictionsRoute: ContradictionsRoute,
+  ExperimentRoute: ExperimentRoute,
+  IndexOfObservationsRoute: IndexOfObservationsRoute,
+  ObservationRoute: ObservationRoute,
+  OrientationRoute: OrientationRoute,
+  PatternsRoute: PatternsRoute,
+  PoetryRoute: PoetryRoute,
+  TheoryRoute: TheoryRoute,
+  UnseenRoute: UnseenRoute,
+  VariablesRoute: VariablesRoute,
+  PoemSlugRoute: PoemSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
