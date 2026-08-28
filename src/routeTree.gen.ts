@@ -20,6 +20,7 @@ import { Route as ObservationRouteImport } from './routes/observation'
 import { Route as OrientationRouteImport } from './routes/orientation'
 import { Route as PatternsRouteImport } from './routes/patterns'
 import { Route as PoetryRouteImport } from './routes/poetry'
+import { Route as ReciprocalRouteImport } from './routes/reciprocal'
 import { Route as TheoryRouteImport } from './routes/theory'
 import { Route as UnseenRouteImport } from './routes/unseen'
 import { Route as VariablesRouteImport } from './routes/variables'
@@ -81,6 +82,11 @@ const PoetryRoute = PoetryRouteImport.update({
   path: '/poetry',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReciprocalRoute = ReciprocalRouteImport.update({
+  id: '/reciprocal',
+  path: '/reciprocal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TheoryRoute = TheoryRouteImport.update({
   id: '/theory',
   path: '/theory',
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/orientation': typeof OrientationRoute
   '/patterns': typeof PatternsRoute
   '/poetry': typeof PoetryRoute
+  '/reciprocal': typeof ReciprocalRoute
   '/theory': typeof TheoryRoute
   '/unseen': typeof UnseenRoute
   '/variables': typeof VariablesRoute
@@ -137,6 +144,7 @@ export interface FileRoutesByTo {
   '/orientation': typeof OrientationRoute
   '/patterns': typeof PatternsRoute
   '/poetry': typeof PoetryRoute
+  '/reciprocal': typeof ReciprocalRoute
   '/theory': typeof TheoryRoute
   '/unseen': typeof UnseenRoute
   '/variables': typeof VariablesRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   '/orientation': typeof OrientationRoute
   '/patterns': typeof PatternsRoute
   '/poetry': typeof PoetryRoute
+  '/reciprocal': typeof ReciprocalRoute
   '/theory': typeof TheoryRoute
   '/unseen': typeof UnseenRoute
   '/variables': typeof VariablesRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
     | '/orientation'
     | '/patterns'
     | '/poetry'
+    | '/reciprocal'
     | '/theory'
     | '/unseen'
     | '/variables'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
     | '/orientation'
     | '/patterns'
     | '/poetry'
+    | '/reciprocal'
     | '/theory'
     | '/unseen'
     | '/variables'
@@ -212,6 +223,7 @@ export interface FileRouteTypes {
     | '/orientation'
     | '/patterns'
     | '/poetry'
+    | '/reciprocal'
     | '/theory'
     | '/unseen'
     | '/variables'
@@ -231,6 +243,7 @@ export interface RootRouteChildren {
   OrientationRoute: typeof OrientationRoute
   PatternsRoute: typeof PatternsRoute
   PoetryRoute: typeof PoetryRoute
+  ReciprocalRoute: typeof ReciprocalRoute
   TheoryRoute: typeof TheoryRoute
   UnseenRoute: typeof UnseenRoute
   VariablesRoute: typeof VariablesRoute
@@ -317,6 +330,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoetryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/reciprocal': {
+      id: '/reciprocal'
+      path: '/reciprocal'
+      fullPath: '/reciprocal'
+      preLoaderRoute: typeof ReciprocalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/theory': {
       id: '/theory'
       path: '/theory'
@@ -367,6 +387,7 @@ const rootRouteChildren: RootRouteChildren = {
   OrientationRoute: OrientationRoute,
   PatternsRoute: PatternsRoute,
   PoetryRoute: PoetryRoute,
+  ReciprocalRoute: ReciprocalRoute,
   TheoryRoute: TheoryRoute,
   UnseenRoute: UnseenRoute,
   VariablesRoute: VariablesRoute,
