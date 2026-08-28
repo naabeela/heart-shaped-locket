@@ -25,6 +25,7 @@ const FIELDS: Array<[string, string]> = [
   ["UNKNOWN VARIABLES", "A lot"],
   ["CONFIDENCE", "Increasing"],
   ["CONCLUSION", "Premature"],
+  ["OBSERVER", "Nabil"],
 ];
 
 function Orientation() {
@@ -58,7 +59,7 @@ function Orientation() {
             ))}
           </dl>
           <div className="mt-6 flex items-end justify-between gap-4">
-            <p className="hand">filed by someone who keeps checking his notes</p>
+            <p className="hand">filed by Nabil, who keeps checking his notes</p>
             <div className="shrink-0 rotate-[-6deg] border-2 border-madder/70 px-3 py-1">
               <span className="meta text-madder/80">UNFINISHED</span>
             </div>
