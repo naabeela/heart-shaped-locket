@@ -19,7 +19,7 @@ export const Route = createFileRoute("/poetry")({
 
 function Poetry() {
   return (
-    <Page tone="quiet">
+    <Page tone="field">
       <Title n="12" sub="Six of them. Each one has its own room. They are meant to be read one at a time, slowly.">
         Poems
       </Title>

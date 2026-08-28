@@ -27,7 +27,7 @@ const STATUS = [
 
 function Conclusion() {
   return (
-    <Page tone="quiet">
+    <Page tone="field">
       <Title n="15" sub="Every honest study ends by admitting what it couldn't reach.">
         Conclusion
         <br />

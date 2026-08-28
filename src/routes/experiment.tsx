@@ -186,7 +186,7 @@ function Experiment() {
     if (unlocked.length) saveUnlocked(unlocked);
   }, [unlocked]);
 
-  const s = SCENARIOS[i];
+  const s = SCENARIOS[i]!;
   const choice = picked === null ? null : s.choices[picked];
 
   const choose = (idx: number) => {

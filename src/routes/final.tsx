@@ -82,7 +82,7 @@ function Final() {
 
         {(stage === "accepted" || stage === "after") && (
           <section className="animate-fade-in mt-20">
-            <Photo photo={PHOTOS.final} tape />
+            <Photo {...PHOTOS.final} index="PLATE V" tape />
             <div className="mt-14 max-w-[56ch] space-y-6 text-[1.02rem] leading-[1.95]">
               <p>
                 Three months ago I did not know you, and now there are sixteen chapters, six poems,

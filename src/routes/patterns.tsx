@@ -95,7 +95,7 @@ const STATES: State[] = [
 
 function Patterns() {
   const [active, setActive] = useState(0);
-  const s = STATES[active];
+  const s = STATES[active]!;
 
   return (
     <Page>

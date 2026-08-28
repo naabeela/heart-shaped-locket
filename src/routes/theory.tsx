@@ -115,7 +115,7 @@ function Theory() {
   const [active, setActive] = useState("abstract");
   useEffect(() => setUnlocked(readUnlocked().length), []);
 
-  const s = SECTIONS.find((x) => x.id === active) ?? SECTIONS[0];
+  const s = SECTIONS.find((x) => x.id === active) ?? SECTIONS[0]!;
 
   return (
     <Page>

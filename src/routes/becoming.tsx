@@ -134,7 +134,7 @@ function Becoming() {
           </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {HERS[open].items.map((it) => (
+            {HERS[open]!.items.map((it) => (
               <article key={it.t} className="border-l-2 border-forest/60 pl-5">
                 <h3 className="display text-2xl">{it.t}</h3>
                 <p className="mt-3 text-[0.96rem] leading-[1.85] text-ink/90">{it.b}</p>
