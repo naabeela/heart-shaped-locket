@@ -104,6 +104,7 @@ function Final() {
                 Happy three months, Chalika Azka Feirazy.
               </p>
               <p className="meta text-forest">Study status: ONGOING.</p>
+              <p className="meta text-muted-foreground">OBSERVER — NABIL</p>
             </div>
 
             {stage === "accepted" ? (

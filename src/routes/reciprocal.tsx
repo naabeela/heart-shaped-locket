@@ -9,7 +9,7 @@ export const Route = createFileRoute("/reciprocal")({
       { title: "What You Taught Me — Chapter 14" },
       {
         name: "description",
-        content: "The reciprocal record: what Chalika Azka Feirazy changed about the person writing this study.",
+        content: "The reciprocal record: what Chalika Azka Feirazy changed about Nabil, the person writing this study.",
       },
       { property: "og:title", content: "What You Taught Me" },
       { property: "og:description", content: "Observation runs in both directions. This is the other column." },

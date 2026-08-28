@@ -25,7 +25,7 @@ export const LETTERS: Letter[] = [
       "Tiga bulan itu pendek. Aku tahu. Tidak cukup untuk mengklaim bahwa aku mengerti kamu sepenuhnya, dan aku tidak akan pura-pura begitu. Tapi tiga bulan cukup untuk tahu bahwa aku tidak sedang bosan, tidak sedang menunggu sesuatu yang lebih menarik, dan tidak sedang menyimpan versi ideal dirimu di kepala yang diam-diam aku bandingkan dengan yang asli.",
       "Yang asli sudah cukup. Yang asli, kebetulan, yang aku suka.",
     ],
-    sign: "Dari orang yang masih terus membaca.",
+    sign: "Dari orang yang masih terus membaca — Nabil.",
   },
   {
     slug: "the-second-letter",
@@ -34,7 +34,7 @@ export const LETTERS: Letter[] = [
     title: "The Second Letter",
     meta: "On the things you carry that nobody weighs",
     paras: [
-      "Chalika Azka Feirazy,",
+      "Acha,",
       "There is a specific kind of tiredness that doesn't come from work. It comes from being the person who holds the temperature of a room steady. You do that constantly, and because you do it well, almost nobody notices it is being done at all.",
       "I want to name it properly, because unnamed labour has a way of becoming invisible even to the person performing it. You check on people before they ask. You read the pause before the sentence. You take the smaller portion, the worse seat, the less convenient time, and you do it fast enough that it looks like preference rather than accommodation. And when someone finally turns the attention back on you, you shrink the answer down to something portable so it won't inconvenience them.",
       "I have watched you do this in months where you were carrying your own weather: the deadlines, the doubt about whether you are on the right path, the low background hum of wondering whether you are enough. You carried all of it and still answered the message at one in the morning.",
@@ -44,7 +44,7 @@ export const LETTERS: Letter[] = [
       "Three months in, the thing I am proudest of is not that you trust me. It's the two or three moments where you let something be difficult in front of me and didn't clean it up afterwards. Those were the moments the whole thing became real.",
       "More of those. That's the entire request.",
     ],
-    sign: "With everything I mean and none of the exaggeration,",
+    sign: "With everything I mean and none of the exaggeration, — Nabil",
   },
   {
     slug: "surat-ketiga",
@@ -53,7 +53,7 @@ export const LETTERS: Letter[] = [
     title: "Surat Ketiga",
     meta: "Tentang kesalahan, perubahan, dan tetap tinggal",
     paras: [
-      "Chalika Azka Feirazy,",
+      "Acha,",
       "Surat ini bagian yang paling sulit ditulis, karena isinya bukan hal yang manis. Isinya tentang bagian-bagian yang tidak rapi: kesalahan, salah paham, hari-hari di mana salah satu dari kita menangani sesuatu dengan buruk.",
       "Aku mau mulai dari pihakku. Ada momen-momen di mana nadaku berubah lebih cepat dari yang aku sadari, dan kamu membacanya sebagai sesuatu tentang dirimu. Itu bukan salahmu. Itu urusan yang harus aku benahi, dan aku tidak mau menyembunyikannya di balik alasan bahwa aku sedang capek atau sedang banyak pikiran. Kamu tidak seharusnya perlu menebak versi mana dari aku yang datang hari ini.",
       "Ada juga momen di mana aku terlalu serius pada saat yang sebenarnya cuma butuh ringan. Kamu pernah bilang itu, dengan cara yang halus, dan aku sempat defensif sebelum akhirnya sadar kamu benar. Serius itu bukan sama dengan hadir. Kadang serius cuma cara aku menutupi bahwa aku tidak tahu harus berkata apa.",
@@ -62,7 +62,7 @@ export const LETTERS: Letter[] = [
       "Dan aku sudah melihat perubahannya. Bulan pertama, kalau ada yang mengganjal, butuh beberapa hari sebelum keluar. Sekarang kadang cuma beberapa jam. Itu terlihat kecil di atas kertas. Tapi buat orang yang terbiasa menyimpan sendiri, beberapa jam itu jarak yang jauh, dan kamu menempuhnya berkali-kali.",
       "Jadi kalau nanti kita salah lagi, dan kita pasti salah lagi, aku ingin kamu ingat satu hal saja: aku tidak sedang mencari alasan untuk pergi. Aku sedang belajar caranya tinggal dengan benar. Dua hal itu kelihatan mirip dari luar dan sama sekali berbeda dari dalam.",
     ],
-    sign: "Masih di sini, dan tidak sedang menghitung mundur.",
+    sign: "Masih di sini, dan tidak sedang menghitung mundur. — Nabil",
   },
   {
     slug: "the-fourth-letter",
@@ -81,7 +81,7 @@ export const LETTERS: Letter[] = [
       "This study is not finished. It will not be finished. I'm not sure I'd want it to be — a completed study is a closed one, and closed things stop getting visited.",
       "Thank you for the three months. Thank you for the times you let it be difficult in front of me. Thank you for being someone whose depth is worth this many pages, and for being patient with a person who is still learning how to read it.",
     ],
-    sign: "Yours, in the ongoing sense,",
+    sign: "Yours, in the ongoing sense, — Nabil",
   },
 ];
 

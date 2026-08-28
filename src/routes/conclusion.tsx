@@ -76,7 +76,7 @@ function Conclusion() {
       </div>
 
       <p className="hand mt-10 -rotate-[0.6deg]">
-        Chalika Azka Feirazy — there's one page left, and it doesn't behave.
+        Acha — there's one page left, and it doesn't behave.
       </p>
     </Page>
   );
