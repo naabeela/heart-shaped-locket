@@ -15,6 +15,7 @@ import { Route as BecomingRouteImport } from './routes/becoming'
 import { Route as ConclusionRouteImport } from './routes/conclusion'
 import { Route as ContradictionsRouteImport } from './routes/contradictions'
 import { Route as ExperimentRouteImport } from './routes/experiment'
+import { Route as FinalRouteImport } from './routes/final'
 import { Route as IndexOfObservationsRouteImport } from './routes/index-of-observations'
 import { Route as LettersRouteImport } from './routes/letters'
 import { Route as ObservationRouteImport } from './routes/observation'
@@ -56,6 +57,11 @@ const ContradictionsRoute = ContradictionsRouteImport.update({
 const ExperimentRoute = ExperimentRouteImport.update({
   id: '/experiment',
   path: '/experiment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinalRoute = FinalRouteImport.update({
+  id: '/final',
+  path: '/final',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexOfObservationsRoute = IndexOfObservationsRouteImport.update({
@@ -126,6 +132,7 @@ export interface FileRoutesByFullPath {
   '/conclusion': typeof ConclusionRoute
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
+  '/final': typeof FinalRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
   '/letters': typeof LettersRoute
   '/observation': typeof ObservationRoute
@@ -146,6 +153,7 @@ export interface FileRoutesByTo {
   '/conclusion': typeof ConclusionRoute
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
+  '/final': typeof FinalRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
   '/letters': typeof LettersRoute
   '/observation': typeof ObservationRoute
@@ -167,6 +175,7 @@ export interface FileRoutesById {
   '/conclusion': typeof ConclusionRoute
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
+  '/final': typeof FinalRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
   '/letters': typeof LettersRoute
   '/observation': typeof ObservationRoute
@@ -189,6 +198,7 @@ export interface FileRouteTypes {
     | '/conclusion'
     | '/contradictions'
     | '/experiment'
+    | '/final'
     | '/index-of-observations'
     | '/letters'
     | '/observation'
@@ -209,6 +219,7 @@ export interface FileRouteTypes {
     | '/conclusion'
     | '/contradictions'
     | '/experiment'
+    | '/final'
     | '/index-of-observations'
     | '/letters'
     | '/observation'
@@ -229,6 +240,7 @@ export interface FileRouteTypes {
     | '/conclusion'
     | '/contradictions'
     | '/experiment'
+    | '/final'
     | '/index-of-observations'
     | '/letters'
     | '/observation'
@@ -250,6 +262,7 @@ export interface RootRouteChildren {
   ConclusionRoute: typeof ConclusionRoute
   ContradictionsRoute: typeof ContradictionsRoute
   ExperimentRoute: typeof ExperimentRoute
+  FinalRoute: typeof FinalRoute
   IndexOfObservationsRoute: typeof IndexOfObservationsRoute
   LettersRoute: typeof LettersRoute
   ObservationRoute: typeof ObservationRoute
@@ -306,6 +319,13 @@ declare module '@tanstack/react-router' {
       path: '/experiment'
       fullPath: '/experiment'
       preLoaderRoute: typeof ExperimentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/final': {
+      id: '/final'
+      path: '/final'
+      fullPath: '/final'
+      preLoaderRoute: typeof FinalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/index-of-observations': {
@@ -402,6 +422,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConclusionRoute: ConclusionRoute,
   ContradictionsRoute: ContradictionsRoute,
   ExperimentRoute: ExperimentRoute,
+  FinalRoute: FinalRoute,
   IndexOfObservationsRoute: IndexOfObservationsRoute,
   LettersRoute: LettersRoute,
   ObservationRoute: ObservationRoute,
