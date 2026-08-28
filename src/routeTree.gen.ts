@@ -15,6 +15,7 @@ import { Route as BecomingRouteImport } from './routes/becoming'
 import { Route as ContradictionsRouteImport } from './routes/contradictions'
 import { Route as ExperimentRouteImport } from './routes/experiment'
 import { Route as IndexOfObservationsRouteImport } from './routes/index-of-observations'
+import { Route as LettersRouteImport } from './routes/letters'
 import { Route as ObservationRouteImport } from './routes/observation'
 import { Route as OrientationRouteImport } from './routes/orientation'
 import { Route as PatternsRouteImport } from './routes/patterns'
@@ -52,6 +53,11 @@ const ExperimentRoute = ExperimentRouteImport.update({
 const IndexOfObservationsRoute = IndexOfObservationsRouteImport.update({
   id: '/index-of-observations',
   path: '/index-of-observations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LettersRoute = LettersRouteImport.update({
+  id: '/letters',
+  path: '/letters',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObservationRoute = ObservationRouteImport.update({
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
+  '/letters': typeof LettersRoute
   '/observation': typeof ObservationRoute
   '/orientation': typeof OrientationRoute
   '/patterns': typeof PatternsRoute
@@ -118,6 +125,7 @@ export interface FileRoutesByTo {
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
+  '/letters': typeof LettersRoute
   '/observation': typeof ObservationRoute
   '/orientation': typeof OrientationRoute
   '/patterns': typeof PatternsRoute
@@ -135,6 +143,7 @@ export interface FileRoutesById {
   '/contradictions': typeof ContradictionsRoute
   '/experiment': typeof ExperimentRoute
   '/index-of-observations': typeof IndexOfObservationsRoute
+  '/letters': typeof LettersRoute
   '/observation': typeof ObservationRoute
   '/orientation': typeof OrientationRoute
   '/patterns': typeof PatternsRoute
@@ -153,6 +162,7 @@ export interface FileRouteTypes {
     | '/contradictions'
     | '/experiment'
     | '/index-of-observations'
+    | '/letters'
     | '/observation'
     | '/orientation'
     | '/patterns'
@@ -169,6 +179,7 @@ export interface FileRouteTypes {
     | '/contradictions'
     | '/experiment'
     | '/index-of-observations'
+    | '/letters'
     | '/observation'
     | '/orientation'
     | '/patterns'
@@ -185,6 +196,7 @@ export interface FileRouteTypes {
     | '/contradictions'
     | '/experiment'
     | '/index-of-observations'
+    | '/letters'
     | '/observation'
     | '/orientation'
     | '/patterns'
@@ -202,6 +214,7 @@ export interface RootRouteChildren {
   ContradictionsRoute: typeof ContradictionsRoute
   ExperimentRoute: typeof ExperimentRoute
   IndexOfObservationsRoute: typeof IndexOfObservationsRoute
+  LettersRoute: typeof LettersRoute
   ObservationRoute: typeof ObservationRoute
   OrientationRoute: typeof OrientationRoute
   PatternsRoute: typeof PatternsRoute
@@ -254,6 +267,13 @@ declare module '@tanstack/react-router' {
       path: '/index-of-observations'
       fullPath: '/index-of-observations'
       preLoaderRoute: typeof IndexOfObservationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/letters': {
+      id: '/letters'
+      path: '/letters'
+      fullPath: '/letters'
+      preLoaderRoute: typeof LettersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/observation': {
@@ -322,6 +342,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContradictionsRoute: ContradictionsRoute,
   ExperimentRoute: ExperimentRoute,
   IndexOfObservationsRoute: IndexOfObservationsRoute,
+  LettersRoute: LettersRoute,
   ObservationRoute: ObservationRoute,
   OrientationRoute: OrientationRoute,
   PatternsRoute: PatternsRoute,
